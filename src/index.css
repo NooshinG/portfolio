@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Vazir;
+    src: url("./assets/fonts/Vazir.eot");
+    src:
+      url("./assets/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+      url("./assets/fonts/Vazir.woff") format("woff"),
+      url("./assets/fonts/Vazir.ttf") format("truetype");
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: Vazir;
+    src: url("./assets/fonts/Vazir-Bold.eot");
+    src:
+      url("./assets/fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+      url("./assets/fonts/Vazir-Bold.woff") format("woff"),
+      url("./assets/fonts/Vazir-Bold.ttf") format("truetype");
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: Vazir;
+    src: url("./assets/fonts/Vazir-Light.eot");
+    src:
+      url("./assets/fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"),
+      url("./assets/fonts/Vazir-Light.woff") format("woff"),
+      url("./assets/fonts/Vazir-Light.ttf") format("truetype");
+    font-weight: 300;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  @apply bg-isabelline font-serif text-base text-space-cadet dark:bg-ultra-violet dark:text-isabelline;
+}
+
+.navbar {
+  @apply flex h-full w-full items-center justify-between bg-isabelline px-10 dark:bg-ultra-violet;
+}
+
+.section {
+  @apply flex gap-10  px-10 py-8 max-md:flex-col;
+}
+
+.icon {
+  @apply h-[28px] w-[28px];
+}
+
+.title--extrabold {
+  @apply text-clamp-extrabold font-extrabold leading-none;
+}
+
+.title--normal {
+  @apply text-clamp-normal font-semibold leading-8;
+}
+
+.paragraph {
+  @apply text-clamp-extralight text-justify font-normal leading-8;
+}
+
+.reveal__home {
+  @apply relative translate-x-[-150px] opacity-0 transition-all duration-1000 ease-in;
+}
+
+.reveal__home.active__home {
+  @apply translate-x-0 opacity-100;
+}
+
+.reveal {
+  @apply relative top-[50px] opacity-0 transition-all duration-1000 ease-in;
+}
+
+.reveal.active {
+  @apply top-0 opacity-100;
 }

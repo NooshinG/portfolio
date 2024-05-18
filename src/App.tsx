@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+// import "./App.css";
+import {
+  AboutMe,
+  ContactMe,
+  Home,
+  MobileNav,
+  NavBar,
+  Works,
+} from "./components";
+// import { useElementOnScreen } from "./hooks/useElementOnScreen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="flex flex-col ">
+        <header className="inline-block h-[10dvh] w-full">
+          <NavBar />
+        </header>
+        <main className="inline-block h-[80dvh] w-full overflow-x-hidden overflow-y-scroll">
+          <Home />
+          <AboutMe />
+          <Works />
+          <ContactMe />
+        </main>
+        <footer className="inline-block h-[10dvh] w-full ">
+          <MobileNav />
+        </footer>
+      </div>
+    </>
   );
 }
 
