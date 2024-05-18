@@ -30,7 +30,7 @@
       "title": "پورتفولیو",
       "image": "/assets/images/portfolio.webp",
       "desc": "وبسایت تک صفحه ای پورتفولیو؛ طراحی شده با استفاده از React, TypeScript و Tailwind .",
-      "github": "github",
+      "github": "https://github.com/NooshinG/portfolio",
       "demo": "demo"
     }
   ]
