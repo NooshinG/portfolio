@@ -29,12 +29,12 @@ const Home = () => {
           className={`reveal__home text-clamp-light flex font-medium leading-8 delay-700 ${isHomeVisible ? `active__home` : ""}`}
         >
           <img
-            src="./assets/icons/location-pin-dark.svg"
+            src="/assets/icons/location-pin-dark.svg"
             alt="location-pin"
             className="icon dark:hidden"
           />
           <img
-            src="./assets/icons/location-pin-light.svg"
+            src="/assets/icons/location-pin-light.svg"
             alt="location-pin"
             className="icon hidden dark:block"
           />
