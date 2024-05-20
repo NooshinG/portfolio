@@ -1,38 +1,15 @@
-import { useEffect, useState } from "react";
-import { myWorksType } from "../types/types";
+
 import InView from "./InView";
 import { SECTIONS } from "../constants";
+import myWorks from "../data/work.json";
 
 const Works = () => {
-  const [myWorks, setMyWorks] = useState<myWorksType | null>(null);
-
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch("data/work.json");
-      const data = await response.json();
-      return data;
-    }
-
-    getData()
-      .then((data) => setMyWorks(data))
-      .catch((error) => console.log(error.message));
-  }, []);
 
   return (
     <section
       className="section min-h-dvh flex-col justify-start"
       id={SECTIONS.WORK}
     >
-      {/* <div>
-        <InView delay={200}>
-          <h1 className={` title--extrabold mb-4 text-rose-quartz `}>
-            نمونه کارها
-          </h1>
-        </InView>
-        <InView delay={200}>
-          <p className={` paragraph `}>{myWorks?.description}</p>
-        </InView>
-      </div> */}
       <h1 className={` title--extrabold mb-4 text-rose-quartz `}>
         نمونه کارها
       </h1>
@@ -40,22 +17,22 @@ const Works = () => {
         {myWorks?.details.map((detail, index) => {
           return (
             <InView delay={100 * index} key={`${detail.id}`}>
-              <li>
-                <div className="flex flex-col gap-4 p-4">
-                  <img
-                    src={detail.image}
-                    alt={detail.title}
-                    className="aspect-video w-[70%] self-center rounded-lg object-cover"
-                  />
-                  <h2 className="title--normal">{detail.title}</h2>
-                  <hr className="border-space-cadet dark:border-pale-dogwood" />
-                  <p className="paragraph ">{detail.desc}</p>
-                  <div className="paragraph  flex gap-6 font-bold text-rose-quartz">
-                    <a href={detail.github}>سورس کد</a>-
-                    <a href={detail.demo}>دمو</a>
-                  </div>
+            <li key={detail.id}>
+              <div className="flex flex-col gap-4 p-4">
+                <img
+                  src={require(`../assets/images/${detail.image}.webp`)}
+                  alt={detail.title}
+                  className="aspect-video w-[70%] self-center rounded-lg object-cover"
+                />
+                <h2 className="title--normal">{detail.title}</h2>
+                <hr className="border-space-cadet dark:border-pale-dogwood" />
+                <p className="paragraph ">{detail.desc}</p>
+                <div className="paragraph  flex gap-6 font-bold text-rose-quartz">
+                  <a href={detail.github}>سورس کد</a>-
+                  <a href={detail.demo}>دمو</a>
                 </div>
-              </li>
+              </div>
+            </li>
             </InView>
           );
         })}

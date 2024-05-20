@@ -2,53 +2,42 @@ import { useEffect, useState } from "react";
 import { aboutMeType } from "../types/types";
 import InView from "./InView";
 import { SECTIONS } from "../constants";
+import dotDark from "../assets/icons/dot-dark.svg";
+import dotLight from "../assets/icons/dot-light.svg";
+import aboutMe from "../data/aboutme.json";
 
 const AboutMe = () => {
-  const [aboutMe, setAboutMe] = useState<aboutMeType | null>(null);
-
-  useEffect(() => {
-    async function getData() {
-      const response = await fetch("data/aboutme.json");
-      const data = await response.json();
-      return data;
-    }
-
-    getData()
-      .then((data) => setAboutMe(data))
-      .catch((error) => console.log(error.message));
-  }, []);
-
   return (
-    <section className="section min-h-dvh flex-col justify-start" id={SECTIONS.ABOUT}>
+    <section
+      className="section min-h-dvh flex-col justify-start"
+      id={SECTIONS.ABOUT}
+    >
       <div>
-        {/* <InView delay={700}> */}
-          <h1 className={` title--extrabold mb-4 text-rose-quartz `}>
-            درباره من
-          </h1>
-        {/* </InView> */}
-        <InView delay={700}>
-          <p className={` paragraph `}>{aboutMe?.aboutme}</p>
-        </InView>
+        <h1 className={` title--extrabold mb-4 text-rose-quartz `}>
+          درباره من
+        </h1>
+
+        <p className={` paragraph `}>{aboutMe?.aboutme}</p>
       </div>
       <ul className="flex flex-col gap-6 md:ps-12">
         {aboutMe?.details.map((detail, index) => {
           return (
             <li key={`${detail.year}-${index}`}>
-              <InView delay={500}>
+              <InView delay={200 * (index + 1)}>
                 <h2 className="title--normal">
                   <span>
                     <img
-                      src="/assets/icons/dot-dark.svg"
+                      src={dotDark}
                       alt="disc"
                       className="icon inline-block dark:hidden"
                     />
                     <img
-                      src="/assets/icons/dot-light.svg"
+                      src={dotLight}
                       alt="disc"
                       className="icon hidden dark:inline-block"
                     />
                   </span>
-                 { `${detail.year}   { ${detail.title} }`}
+                  {`${detail.year}   { ${detail.title} }`}
                 </h2>
                 <p className="paragraph ">{detail.desc}</p>
               </InView>

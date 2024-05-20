@@ -17,7 +17,7 @@ function App() {
         <header className="inline-block h-[10dvh] w-full">
           <NavBar />
         </header>
-        <main className="inline-block h-[80dvh] w-full overflow-x-hidden overflow-y-scroll">
+        <main className="inline-block h-[80dvh] w-full overflow-x-hidden overflow-y-scroll scroll-smooth">
           <Home />
           <AboutMe />
           <Works />

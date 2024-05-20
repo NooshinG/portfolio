@@ -1,4 +1,6 @@
 import { SECTIONS } from "../constants";
+import moon from '../assets/icons/moon.svg'
+import sun from '../assets/icons/sun.svg'
 
 const NavBar = () => {
   const toggleThemeHandler = () => {
@@ -26,12 +28,12 @@ const NavBar = () => {
       <div className="inline-block">
         <button type="button" className="icon" onClick={toggleThemeHandler}>
           <img
-            src="/assets/icons/moon.svg"
+            src={moon}
             alt="moon"
             className="dark:hidden"
           />
           <img
-            src="/assets/icons/sun.svg"
+            src={sun}
             alt="sun"
             className="hidden dark:block"
           />

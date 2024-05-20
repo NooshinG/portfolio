@@ -5,7 +5,7 @@ const Resume = () => {
         const fileURL = window.URL.createObjectURL(blob);
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "logo192.png";
+        alink.download = "Resume-Nooshin-Ghorbani.pdf";
         alink.click();
       });
     });

@@ -2,11 +2,12 @@ import { SECTIONS } from "../constants";
 import Avatar from "./Avatar";
 import Resume from "./Resume";
 import { useElementOnScreen } from "../hooks/useElementOnScreen";
+import locationPinDark from '../assets/icons/location-pin-dark.svg'
+import locationPinLight from '../assets/icons/location-pin-light.svg'
 
 const Home = () => {
   const { ref: HomeRef, isVisible: isHomeVisible } = useElementOnScreen();
-  // const isHomeVisible = true
-
+  
   return (
     <section
       className="section min-h-[80dvh]  place-content-center"
@@ -29,12 +30,12 @@ const Home = () => {
           className={`reveal__home text-clamp-light flex font-medium leading-8 delay-700 ${isHomeVisible ? `active__home` : ""}`}
         >
           <img
-            src="assets/icons/location-pin-dark.svg"
+            src={locationPinDark}
             alt="location-pin"
             className="icon dark:hidden"
           />
           <img
-            src="assets/icons/location-pin-light.svg"
+            src={locationPinLight}
             alt="location-pin"
             className="icon hidden dark:block"
           />

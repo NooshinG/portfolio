@@ -4,7 +4,7 @@
     {
       "id": "ecommerce-app-ngh",
       "title": "سایت فروشگاهی",
-      "image": "/assets/images/ecommerce-app.webp",
+      "image": "ecommerce-app",
       "desc": "وبسایت فروشگاهی؛ پیاده سازی با استفاده از Next.js و براساس طرح فیگما",
       "github": "https://github.com/NooshinG/ecommerce-app",
       "demo": "https://ecommerce-app-ngh.vercel.app/"
@@ -12,7 +12,7 @@
     {
       "id": "pomodoro-ngh",
       "title": "پومودورو",
-      "image": "/assets/images/pomodoro.webp",
+      "image": "pomodoro",
       "desc": "یک اپلیکیشن پومودورو با سه حالت Timing مجزا",
       "github": "https://github.com/NooshinG/pomodoro",
       "demo": "https://pomodoro-ngh.vercel.app/"
@@ -20,7 +20,7 @@
     {
       "id": "dribbble-ngh",
       "title": "کلون وبسایت Dribbble",
-      "image": "/assets/images/dribbble.webp",
+      "image": "dribbble",
       "desc": "وبسایت dribbble یک رسانه اجتماعی طراحان دیجیتال است که به کمک html, css و Javascript پیاده سازی شده است",
       "github": "https://github.com/NooshinG/DribbbleClone",
       "demo": "https://nooshing.github.io/DribbbleClone/"
@@ -28,7 +28,7 @@
     {
       "id": "portfolio-ngh",
       "title": "پورتفولیو",
-      "image": "/assets/images/portfolio.webp",
+      "image": "portfolio",
       "desc": "وبسایت تک صفحه ای پورتفولیو؛ طراحی شده با استفاده از React, TypeScript و Tailwind .",
       "github": "https://github.com/NooshinG/portfolio",
       "demo": "https://nooshing.github.io/portfolio/"

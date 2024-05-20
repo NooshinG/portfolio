@@ -1,40 +1,46 @@
 import { SECTIONS } from "../constants";
+import homeDark from '../assets/icons/home-dark.svg'
+import homeLight from '../assets/icons/home-light.svg'
+import personDark from '../assets/icons/person-dark.svg'
+import personLight from '../assets/icons/person-light.svg'
+import workDark from '../assets/icons/work-dark.svg'
+import workLight from '../assets/icons/work-light.svg'
 
 const MobileNav = () => {
   return (
     <nav className="navbar md:hidden">
       <a href="/">
         <img
-          src="/assets/icons/home-dark.svg"
+          src={homeDark}
           alt="home"
           className="icon dark:hidden"
         />
         <img
-          src="/assets/icons/home-light.svg"
+          src={homeLight}
           alt="home"
           className="icon hidden dark:block"
         />
       </a>
       <a href={`#${SECTIONS.ABOUT}`}>
         <img
-          src="/assets/icons/person-dark.svg"
+          src={personDark}
           alt="about me"
           className="icon dark:hidden"
         />
         <img
-          src="/assets/icons/person-light.svg"
+          src={personLight}
           alt="home"
           className="icon hidden dark:block"
         />
       </a>
       <a href={`#${SECTIONS.WORK}`}>
         <img
-          src="/assets/icons/work-dark.svg"
+          src={workDark}
           alt="works"
           className="icon dark:hidden"
         />
         <img
-          src="/assets/icons/work-light.svg"
+          src={workLight}
           alt="home"
           className="icon hidden dark:block"
         />
